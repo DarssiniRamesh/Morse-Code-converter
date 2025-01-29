@@ -1,0 +1,60 @@
+/* Preload fonts with optimized loading strategy */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'),
+       url('https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono Medium'),
+       url('https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8-qxTOlOV.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono Bold'),
+       url('https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8xaxTOlOV.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Font fallback system */
+body {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  letter-spacing: -0.02em;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --background-color: white;
+  --text-color: black;
+  --accent-color: rgba(0, 0, 0, 0.1);
+  --border-color: var(--accent-color);
+  
+  /* Typography */
+  --font-size-large: 32px;
+  --font-size-medium: 28px;
+  --font-size-base: 16px;
+  
+  /* Border radius */
+  --border-radius: 30px;
+  
+  /* Transitions */
+  --transition-speed: 0.2s;
+}

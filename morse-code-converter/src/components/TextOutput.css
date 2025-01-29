@@ -1,0 +1,26 @@
+.text-output-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.text-output-container label {
+  font-size: 32px;
+  margin-bottom: 24px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.morse-output {
+  height: 300px;
+  font-size: 28px;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: 'JetBrains Mono', monospace;
+}

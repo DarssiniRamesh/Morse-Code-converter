@@ -1,0 +1,4 @@
+{
+    "command": "npm test",
+    "working_directory": "/home/kavia/workspace/Morse-Code-converter/morse-code-converter"
+}

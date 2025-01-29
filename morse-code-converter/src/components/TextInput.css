@@ -1,0 +1,35 @@
+.text-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.text-input-container label {
+  font-size: 32px;
+  margin-bottom: 24px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.text-input-container textarea {
+  height: 300px;
+  font-size: 28px;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  resize: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.text-input-container textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.text-input-container .error-message {
+  color: #ff4444;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+}
