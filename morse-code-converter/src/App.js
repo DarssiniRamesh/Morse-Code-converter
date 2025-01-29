@@ -178,49 +178,54 @@ function App() {
       <div className="App">
       <h1>Morse Code Converter</h1>
       <div className="converter-container">
-        <TextInput 
-          value={state.inputText} 
-          onChange={handleTextChange}
-          error={state.error}
-        />
-        <TextOutput 
-          morseCode={state.morseCode}
-          error={state.error}
-        />
-        <div className="controls">
-          <ControlSlider
-            label="Speed"
-            value={state.speed}
-            onChange={(value) => updateState({ speed: value })}
-            min={5}
-            max={50}
-            defaultValue={20}
+        <div className="left-column">
+          <TextInput 
+            value={state.inputText} 
+            onChange={handleTextChange}
+            error={state.error}
           />
-          <ControlSlider
-            label="Pitch"
-            value={state.pitch}
-            onChange={(value) => updateState({ pitch: value })}
-            min={200}
-            max={1000}
-            defaultValue={550}
+          <TextOutput 
+            morseCode={state.morseCode}
+            error={state.error}
           />
-          <ControlSlider
-            label="Volume"
-            value={state.volume}
-            onChange={(value) => updateState({ volume: value })}
-            min={0}
-            max={100}
-            defaultValue={80}
+          <PlaybackControls
+            onPlay={handlePlay}
+            onPause={handlePause}
+            onStop={handleStop}
+            isPlaying={state.isPlaying}
+            isPaused={state.isPaused}
+            disabled={!state.morseCode || !!state.error || !state.isInitialized}
           />
         </div>
-        <PlaybackControls
-          onPlay={handlePlay}
-          onPause={handlePause}
-          onStop={handleStop}
-          isPlaying={state.isPlaying}
-          isPaused={state.isPaused}
-          disabled={!state.morseCode || !!state.error || !state.isInitialized}
-        />
+        <div className="right-column">
+          <h2>Controls</h2>
+          <div className="controls">
+            <ControlSlider
+              label="Speed"
+              value={state.speed}
+              onChange={(value) => updateState({ speed: value })}
+              min={5}
+              max={50}
+              defaultValue={20}
+            />
+            <ControlSlider
+              label="Pitch"
+              value={state.pitch}
+              onChange={(value) => updateState({ pitch: value })}
+              min={200}
+              max={1000}
+              defaultValue={550}
+            />
+            <ControlSlider
+              label="Volume"
+              value={state.volume}
+              onChange={(value) => updateState({ volume: value })}
+              min={0}
+              max={100}
+              defaultValue={80}
+            />
+          </div>
+        </div>
       </div>
       </div>
     </ErrorBoundary>
